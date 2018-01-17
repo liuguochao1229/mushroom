@@ -1,0 +1,150 @@
+@charset "UTF-8";
+html,body{
+	height:100%;
+	font-size:20px;
+	// background:#e5e4e1;
+}
+a{
+	// color:#666666;
+	text-decoration: none;
+}
+*{
+	margin:0;
+	padding:0;
+}
+@mixin ell($a){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:$a;
+  line-clamp:$a;
+}
+@function f($num){
+	@return $num/20;
+}
+
+#top{
+	width:100%;
+	height:f(90rem);
+	text-align:center;
+	line-height:f(90rem);
+	border-bottom:f(1rem) solid #999;
+	
+	p{
+		height:f(60rem);
+		font-size:f(40rem);
+		position:absolute;
+		left:50%;
+		margin-left:f(-40rem);
+	}
+	.top_back{
+		float:left;
+		padding-left:f(20rem);
+		// padding-right:f(85rem);
+		img{
+			margin-top:f(25rem);
+			width:f(30rem);
+			height:f(40rem);
+		}		
+	}
+	.top_right{
+		float:right;
+		a{
+			color:#999;
+			font-size:f(40rem);
+		}
+	}
+}
+#center{
+	width:100%;
+	height:f(200rem);
+	// background:#e5e4e1;
+	margin-top:f(80rem);
+	.login_name{
+		width:100%;
+		text-align:center;
+		color:#666;
+		font-size:f(35rem);
+		margin-bottom:f(10rem);
+		margin-top:f(10rem);
+	}
+	input::-webkit-input-placeholder { /* WebKit browsers */ 
+		color:#ededed  !important; 
+	} 
+	input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+		color: #ededed !important ; 
+	} 
+	input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+		color: #ededed !important; 
+	} 
+	input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+		color:  #ededed !important; 
+	} 
+	.inp1{
+		width:90%;
+		height:f(50rem);
+		text-align:center;
+		margin:f(30rem) 5%;
+		outline: none;
+		border:none;
+		font-size:f(50rem);
+		border-bottom:f(1rem) solid #ededed;
+	}
+	.login_pwd{
+		@extend .login_name;
+	}
+	.inp2{
+		@extend .inp1;
+	}
+}
+#login_button{
+	width:90%;
+	height:f(100rem);
+	margin:f(170rem) auto 0;
+	// background:pink;
+	.button{
+		width:100%;
+		height:f(90rem);
+		background:#ff1877;
+		text-align:center;
+		line-height:f(90rem);
+		font-size:f(50rem);
+		color:white;
+		border-radius:f(5rem);
+	}
+	a{
+		font-size:f(35rem);
+		color:#666;
+	}
+	p{
+		margin-top:f(15rem);
+	}
+	p:nth-child(2){
+		float:right;
+		a{
+			color:#ff5777;
+		}
+	}
+}
+#logo{
+	width:f(180rem);
+	height:f(180rem);
+	border-radius:50%;
+	background:#0598e2;
+	text-align:center;
+	line-height:f(30rem);
+	position:absolute;
+	margin-top:f(90rem);
+	left:50%;
+	margin-left:f(-75rem);
+	img{
+		margin-top:f(30rem);
+		width:f(70rem);
+		height:f(72rem);
+	}
+	p{
+		color:white;
+		font-size:f(40rem);
+	}
+}
